@@ -18,6 +18,8 @@ export class AddBlogComponent implements OnInit {
     }
     this.blogs.push(blog);
     localStorage.setItem('blogs', JSON.stringify(this.blogs));
+    title.value = '';
+    content.value = '';
     alert('Blog submitted');
   }
 
