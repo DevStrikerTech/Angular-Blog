@@ -11,8 +11,8 @@ export class AddBlogComponent implements OnInit {
   blogs = [];
   ngOnInit() {
   }
-  addBlog(title, content) {
-    const blog = {title: title.value, content: content.value};
+  addBlog(title, content, img) {
+    const blog = {title: title.value, content: content.value, img: img.value};
     if (localStorage.getItem('blogs')) {
       this.blogs = JSON.parse(localStorage.getItem('blogs'));
     }
@@ -20,6 +20,7 @@ export class AddBlogComponent implements OnInit {
     localStorage.setItem('blogs', JSON.stringify(this.blogs));
     title.value = '';
     content.value = '';
+    img.value = '';
     alert('Blog submitted');
   }
 
