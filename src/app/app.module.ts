@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import {RouterModule} from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AddBlogComponent } from './add-blog/add-blog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AddBlogComponent
   ],
   imports: [
     BrowserModule,
