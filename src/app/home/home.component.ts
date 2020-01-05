@@ -8,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 
   constructor() { }
-
+  blogs = [];
   ngOnInit() {
+    this.blogs = JSON.parse(localStorage.getItem('blogs'));
   }
 
 }

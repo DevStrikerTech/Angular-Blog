@@ -1,13 +1,13 @@
 <div class="container">
   <h1>My Blogs</h1>
   <br>
-  <div style="padding: 20px 0px">
+  <div style="padding: 20px 0px;" *ngFor="let blog of blogs">
     <div class="card">
       <div class="card-header">
-        Title
+        {{ blog.title }}
       </div>
       <div class="card-body">
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+        <p class="card-text">{{ blog.content }}</p>
       </div>
     </div>
   </div>
