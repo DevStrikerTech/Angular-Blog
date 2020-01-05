@@ -8,8 +8,17 @@ import { Component, OnInit } from '@angular/core';
 export class AddBlogComponent implements OnInit {
 
   constructor() { }
-
+  blogs = [];
   ngOnInit() {
+  }
+  addBlog(title, content) {
+    const blog = {title: title.value, content: content.value};
+    if (localStorage.getItem('blogs')) {
+      this.blogs = JSON.parse(localStorage.getItem('blogs'));
+    }
+    this.blogs.push(blog);
+    localStorage.setItem('blogs', JSON.stringify(this.blogs));
+    alert('Blog submitted');
   }
 
 }
